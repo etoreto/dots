@@ -29,6 +29,10 @@ set tags+=tags;
 set softtabstop=4 shiftwidth=4 expandtab
 set statusline=%f\ %h%w%m%r%=[%{&ff}]%y[%p%%]\ %l:%-3c
 set wildignore+=*.a,*.o,*.dep
+highlight DiffAdd ctermfg=Black ctermbg=Green
+highlight DiffChange ctermfg=Black ctermbg=Yellow
+highlight DiffDelete ctermfg=Red ctermbg=None
+highlight DiffText ctermfg=White ctermbg=LightBlue
 highlight Folded ctermfg=White
 highlight Highlight ctermfg=Black
 highlight LineNr ctermfg=Gray
