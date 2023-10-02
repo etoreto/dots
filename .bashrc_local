@@ -5,7 +5,6 @@ alias town="ssh town -t 'tmux attach || tmux'"
 alias townpush='rsync -irc --exclude=".*" ~/public_html/ town:~/public_html/'
 alias wgetwg='wget -nd -nH -r -l 1 -H -D i.4cdn.org -A png,gif,jpg,jpeg -R s.png,s.gif,s.jpg,s.jpeg'
 alias wgetpdf='wget -e robots=off -nv -r -l 1 -nH -A pdf'
-alias yt-mp3='youtube-dl --ignore-config --extract-audio --audio-format mp3'
 
 # rclone aliases
 alias dsremove="find . -name '.DS_Store' -type f -delete"
@@ -14,3 +13,11 @@ alias dlup="rclone copyto --include '{bg,bkmks,dottxt,images}/**' $HOME/Download
 alias dldn="rclone copyto --include '{bg,bkmks,dottxt,images}/**' drive:misc $HOME/Downloads/"
 alias muup="rclone -P copy ~/Music/iTunes/iTunes\ Media/Music/ dropbox:music/"
 alias binup="rclone -P copy ~/bin/ drive:misc/scripts/"
+alias books-up="rclone -P copy ~/books/ drive:books/"
+alias notes-up="rclone -P copy ~/notes/ drive:notes/"
+
+# personal
+alias diary-up="rclone -P copy ~/archived/diary/ drive:misc/archived/diary/ --no-update-modtime"
+alias reminisce='jrnl -today-in-history --format markdown | glow -p -'
+alias sync-marks='rclone -P sync ~/archived/marks/ tkm:marks/'
+alias sync-calibre='rclone -P sync ~/calibre/ tkm:calibre/ --exclude=**/*.mobi'
