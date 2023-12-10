@@ -38,7 +38,7 @@ highlight Highlight ctermfg=Black
 highlight LineNr ctermfg=Gray
 highlight Search ctermfg=Black
 highlight Visual ctermbg=Gray
-" let g:rustfmt_autosave = 1
+let g:rustfmt_autosave = 1
 
 " mappings
 nnoremap <space><space> :b <C-d>
