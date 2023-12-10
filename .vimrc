@@ -74,7 +74,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-dispatch'
     Plug 'tpope/vim-fugitive'
     nnoremap <space>gd :Gvdiffsplit<CR>
-    nnoremap <space>gb :Gblame<CR>
+    nnoremap <space>gb :Git blame<CR>
     Plug 'tpope/vim-surround'
 call plug#end()
 endif
