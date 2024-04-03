@@ -57,25 +57,25 @@ nnoremap <space>t :tabfind *
 " wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 if !empty(glob('~/.vim/autoload/plug.vim'))
 call plug#begin('~/.vim/plugged')
+    Plug 'mhinz/vim-signify'
+        if has("patch-8.1.1564")|set signcolumn=number|endif
+        nnoremap <space>u :SignifyHunkUndo<CR>
     Plug 'romainl/vim-qf'
     Plug 'romainl/vim-qlist'
     Plug 'tpope/vim-commentary'
+    Plug 'tpope/vim-dispatch'
     Plug 'tpope/vim-eunuch'
+    Plug 'tpope/vim-fugitive'
+        nnoremap <space>gb :Git blame<CR>
+        nnoremap <space>gd :Gvdiffsplit<CR>
     Plug 'tpope/vim-repeat'
+    Plug 'tpope/vim-speeddating'
+    Plug 'tpope/vim-surround'
     Plug 'tpope/vim-unimpaired'
     " language specific
     Plug 'vhda/verilog_systemverilog.vim', { 'for' : 'systemverilog' }
     Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
     Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-    " trying these out
-    Plug 'mhinz/vim-signify'
-    if has("patch-8.1.1564")|set signcolumn=number|endif
-    nnoremap <space>u :SignifyHunkUndo<CR>
-    Plug 'tpope/vim-dispatch'
-    Plug 'tpope/vim-fugitive'
-    nnoremap <space>gd :Gvdiffsplit<CR>
-    nnoremap <space>gb :Git blame<CR>
-    Plug 'tpope/vim-surround'
 call plug#end()
 endif
 
